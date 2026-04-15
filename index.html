@@ -1,6 +1,14 @@
-<iframe 
-  src="https://script.google.com/macros/s/AKfycbxmopM7oFFHFjXRIwjo-JT-DKZ7qE506lXnKuCUaVmPjLe8atYAk42lE_-8ZNHV6ESV/exec" 
-  width="100%" 
-  height="600px" 
-  frameborder="0">
-</iframe>
+<script>
+  const webAppUrl = "https://script.google.com/macros/s/AKfycbxmopM7oFFHFjXRIwjo-JT-DKZ7qE506lXnKuCUaVmPjLe8atYAk42lE_-8ZNHV6ESV/exec";
+
+  // Hàm để lấy dữ liệu từ Apps Script
+  async function getData() {
+    try {
+      const response = await fetch(webAppUrl);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Lỗi kết nối:", error);
+    }
+  }
+</script>
